@@ -32,7 +32,40 @@ class SortingTestsNew: XCTestCase {
         let actual = sorting.bubbleSort(data)
         XCTAssertEqual(actual,expected)
     }
-    func testBubbleSortPerformance()
+    func testBubbleSortPerformanceLength5() {
+        var inputArray = [Int()]
+        let n = 5
+        for _ in 0...n {
+            inputArray.append(Int.random(in:0...9))
+        }
+        let sorting = Sorting()
+        measure {
+            let _ = sorting.bubbleSort(inputArray)
+        }
+        
+    }
+    func testBubleSortPerformanceLength50() {
+        var inputArray = [Int()]
+        let n = 50
+        for _ in 0...n {
+            inputArray.append(Int.random(in:0...9))
+        }
+        let sorting = Sorting()
+        measure {
+            let _ = sorting.bubbleSort(inputArray)
+        }
+    }
     
+    func testBubbleSortPerformanceLength500() {
+        var inputArray = [Int()]
+        let n = 500
+        for _ in 0...n {
+            inputArray.append(Int.random(in:0...9))
+        }
+        let sorting = Sorting()
+        measure {
+            let _ = sorting.bubbleSort(inputArray)
+        }
+    }
 
 }

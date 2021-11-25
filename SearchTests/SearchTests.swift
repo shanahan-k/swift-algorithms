@@ -14,7 +14,7 @@ class SearchTests: XCTestCase {
         let searching = Searching()
         let data = [1,2,4,5,7,9]
         let expected = true
-        let actual = searching.LinearSearch(data,4)
+        let actual = searching.linearSearch(data,4)
         XCTAssertEqual(actual,expected)
     }
 
