@@ -30,7 +30,7 @@ class Sorting {
         }
     }
     
-    func insertionSort<T: Comparable>(_ array: [T]) -> [T] {
+    func insertionSort(_ array: [Int]) -> [Int] {
         guard array.count > 1 else { return array }
 
         var sortedArray = array
@@ -44,5 +44,9 @@ class Sorting {
             sortedArray[currentIndex] = temp
         }
         return sortedArray
+    }
+    
+    func mergeSort(_ aList:[Int]) -> [Int] {
+        guard
     }
 }

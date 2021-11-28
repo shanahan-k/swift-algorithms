@@ -21,6 +21,25 @@ class Searching {
       }
       return false
     }
+    
+    
+    func binarySearch(_ Alist:[Int], _ itemSought:Int, _ first:Int, _ last:Int) -> Int {
+        if last < first {
+            return -1
+        } else {
+            let midpoint = (first + last) / 2
+            if Alist[midpoint] > itemSought {
+                return binarySearch(Alist,itemSought,first,midpoint-1)
+            } else {
+                if Alist[midpoint] < itemSought {
+                    return binarySearch(Alist, itemSought, midpoint+1,last)
+                    
+                } else {
+                    return midpoint
+                }
+            }
+        }
+    }
 
 }
 
